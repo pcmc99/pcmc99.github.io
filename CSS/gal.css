@@ -1,0 +1,38 @@
+#galeria #container{
+	width: 480px;
+	height: auto;
+	margin: 150px auto;
+	background-color: #ddd;
+}
+#galeria .principal{
+	width: 480px;
+	height: 280px;
+	overflow: hidden;
+}
+#galeria .slide{
+	display: flex;
+	width: 400%;
+	transition: all .8s;
+}
+#galeria label img{
+	width: 120px;
+	cursor: pointer;
+	float: left;
+	opacity: 0.3;
+	transition: all .4s;
+}
+#galeria #foto2:checked ~ .principal .slide{
+	margin-left: -100%;
+}
+#galeria #foto3:checked ~ .principal .slide{
+	margin-left: -200%;
+}
+#galeria #foto4:checked ~ .principal .slide{
+	margin-left: -300%;
+}
+input[name="grupo"]{
+	display: none;
+}
+input[name="grupo"]:checked + label img{
+	opacity: 0.9;
+}
